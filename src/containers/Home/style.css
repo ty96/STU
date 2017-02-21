@@ -1,0 +1,46 @@
+.newsBox {
+  width: 100%;
+  padding: 20px 150px;
+}
+
+.tabs {
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  border: solid #ccc 1px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.others {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.star {
+  margin: 0 50px;
+  height: 120px;
+  width: 100%;
+  background: #ccc;
+  vertical-align: top;
+  text-align: center;
+}
+
+.star img {
+  width: 80px;
+  height: 80px;
+  margin: 20px;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 50%;
+}
+
+.star p {
+  margin: 0;
+  padding: 0 20px;
+  line-height: 120px;
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: top;
+}

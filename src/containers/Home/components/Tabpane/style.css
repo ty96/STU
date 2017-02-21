@@ -1,0 +1,10 @@
+.box {
+  min-height: 280px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 30px;
+}

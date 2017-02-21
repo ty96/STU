@@ -1,0 +1,20 @@
+.box {
+  padding: 0 40px;
+  width: 33%;
+  min-height: 360px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.title {
+  font-size: 16px;
+  line-height: 60px;
+  text-align: center;
+  border-bottom: dotted #ccc 1px;
+  margin-bottom: 10px;
+}
