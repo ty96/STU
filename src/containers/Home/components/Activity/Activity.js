@@ -4,6 +4,7 @@ import style from './style.css';
 import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
+import getHostName from 'utils/hostName';
 
 class Activity extends Component {
   static propTypes = {
@@ -39,7 +40,7 @@ class Activity extends Component {
       return (
         <div className={style.image} key={item.title}>
           <Link to={itsLink}>
-            <img className={style.image} src={`http://123.56.218.173:8080/${item.url}`} alt="???" />
+            <img className={style.image} src={`http://${getHostName()}/${item.url}`} alt="???" />
           </Link>
         </div>
       );

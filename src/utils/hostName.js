@@ -1,3 +1,5 @@
-function getHostName() => {
-  return '123'
+function getHostName() {
+  return '123.56.218.173:8080';
 }
+
+export default getHostName;

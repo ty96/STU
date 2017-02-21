@@ -12,6 +12,7 @@ import Menus from 'components/Menus';
 import Activity from './components/Activity';
 import Tabpane from './components/Tabpane';
 import { Tabs } from 'antd';
+import getHostName from 'utils/hostName';
 
 import 'whatwg-fetch';
 import * as actions from './actions';
@@ -59,7 +60,7 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
-    fetch('http://123.56.218.173:8080/index/')
+    fetch(`http://${getHostName()}/index/`)
       .then((res) => {
         res.json()
           .then((data) => {
@@ -106,7 +107,7 @@ class Home extends Component {
           <div className={style.others}>
             <div className={style.star}>
               <img
-                src={`http://123.56.218.173:8080/${this.state.star[0].imageUrl}`}
+                src={`http://${getHostName()}/${this.state.star[0].imageUrl}`}
                 alt={this.state.star[0].title}
               />
               <p>{this.state.star[0].title}</p>

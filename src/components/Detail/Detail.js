@@ -2,6 +2,7 @@
 import style from './style.css';
 
 import React, { Component, PropTypes } from 'react';
+import getHostName from 'utils/hostName';
 
 
 class Detail extends Component {
@@ -13,7 +14,6 @@ class Detail extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      hostname: '123.56.218.173:8080',
       body: '',
       title: '',
       excEditor: '',
@@ -25,7 +25,8 @@ class Detail extends Component {
   }
 
   componentDidMount = () => {
-    fetch(`http://${this.state.hostname}/${this.props.articleType}/${this.props.title}`)
+    console.log(getHostName());
+    fetch(`http://${getHostName()}/${this.props.articleType}/${this.props.title}`)
       .then((res) => {
         res.json()
           .then((data) => {

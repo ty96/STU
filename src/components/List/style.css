@@ -1,0 +1,19 @@
+.detail {
+  margin: auto;
+  padding: 60px 0;
+  width: 960px;
+}
+
+.article {
+  font-size: 12px;
+  border-top: dotted #ccc 1px;
+  border-bottom: dotted #ccc 1px;
+  padding: 20px;
+  min-height: 360px;
+}
+
+.article a {
+  font-size: 14px;
+  line-height: 32px;
+  color: #222222;
+}

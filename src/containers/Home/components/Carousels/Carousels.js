@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import { Carousel } from 'antd';
+import getHostName from 'utils/hostName';
 
 
 class Carousels extends Component {
@@ -31,7 +32,7 @@ class Carousels extends Component {
         <div className="topic_item" key={item.image}>
           <Link to={itsLink}>
             <img
-              src={`http://123.56.218.173:8080/${item.image}`}
+              src={`http://${getHostName()}/${item.image}`}
               alt={item.url}
               className={classnames(...className.split(), style.pictures)}
             />

@@ -6,6 +6,9 @@ import Main from 'containers/Main';
 import xNewsDetail from 'containers/xNewsDetail';
 import sNewsDetail from 'containers/sNewsDetail';
 import infoDetail from 'containers/infoDetail';
+import xNewsList from 'containers/xNewsList';
+import sNewsList from 'containers/sNewsList';
+import infoList from 'containers/infoList';
 
 export function createRoutes() {
   return ([
@@ -28,6 +31,18 @@ export function createRoutes() {
     {
       path: '/information/:id',
       component: infoDetail,
+    },
+    {
+      path: '/xnews',
+      component: xNewsList,
+    },
+    {
+      path: '/snews',
+      component: sNewsList,
+    },
+    {
+      path: '/information',
+      component: infoList,
     },
   ]);
 }
