@@ -44,7 +44,7 @@ class xNewsList extends Component {
   }
 
   componentDidMount = () => {
-    fetch(`http://${getHostName()}/${this.state.newsType}`)
+    fetch(`${getHostName()}/${this.state.newsType}`)
       .then((res) => {
         res.json()
           .then((data) => {

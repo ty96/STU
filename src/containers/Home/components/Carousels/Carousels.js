@@ -27,12 +27,12 @@ class Carousels extends Component {
   render() {
     const { className } = this.props;
     const carousels = this.props.carouselList.map((item) => {
-      const itsLink = `/image/${item.image}`;
+      const itsLink = `/image${item.image}`;
       return (
         <div className="topic_item" key={item.image}>
           <Link to={itsLink}>
             <img
-              src={`http://${getHostName()}/${item.image}`}
+              src={`${getHostName()}${item.image}`}
               alt={item.url}
               className={classnames(...className.split(), style.pictures)}
             />

@@ -60,7 +60,7 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
-    fetch(`http://${getHostName()}/index/`)
+    fetch(`${getHostName()}/index/`)
       .then((res) => {
         res.json()
           .then((data) => {
@@ -94,23 +94,27 @@ class Home extends Component {
         <div className={style.newsBox}>
           <Tabs defaultActiveKey="1" className={style.tabs}>
             <TabPane tab="学术" key="1">
-              <Tabpane topicList={this.state.academy} title="" />
+              <Tabpane topicList={this.state.academy} type={'academy'} title="" />
             </TabPane>
             <TabPane tab="权益" key="2">
-              <Tabpane topicList={this.state.rights} title="" />
+              <Tabpane topicList={this.state.rights} type={'rights'} title="" />
             </TabPane>
             <TabPane tab="思潮" key="3">
-              <Tabpane topicList={this.state.thoughts} title="" />
+              <Tabpane topicList={this.state.thoughts} type={'thoughts'} title="" />
             </TabPane>
           </Tabs>
 
           <div className={style.others}>
             <div className={style.star}>
               <img
-                src={`http://${getHostName()}/${this.state.star[0].imageUrl}`}
+                src={`${getHostName()}${this.state.star[0].imageUrl}`}
                 alt={this.state.star[0].title}
               />
               <p>{this.state.star[0].title}</p>
+            </div>
+            <div className={style.wonder}>
+              <img src={`${getHostName()}${this.state.wonderfulImage[0].imageUrl}`} alt="" />
+              <img src={`${getHostName()}${this.state.wonderfulVideo[0].imageUrl}`} alt="" />
             </div>
           </div>
         </div>

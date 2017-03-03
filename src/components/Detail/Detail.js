@@ -25,8 +25,7 @@ class Detail extends Component {
   }
 
   componentDidMount = () => {
-    console.log(getHostName());
-    fetch(`http://${getHostName()}/${this.props.articleType}/${this.props.title}`)
+    fetch(`${getHostName()}/${this.props.articleType}/${this.props.title}`)
       .then((res) => {
         res.json()
           .then((data) => {
@@ -51,7 +50,7 @@ class Detail extends Component {
             <span className={style.right}>浏览次数: {this.state.viewNum}</span>
           </p>
           <h3>{this.state.title}</h3>
-          <img src={`http://${this.state.hostname}/${this.state.image}`} alt={this.state.image} />
+          <img src={`${this.state.hostname}/${this.state.image}`} alt={this.state.image} />
           <p className={style.body}>{this.state.body}</p>
         </div>
       </div>

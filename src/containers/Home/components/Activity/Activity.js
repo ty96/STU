@@ -26,7 +26,7 @@ class Activity extends Component {
   render() {
     const { className } = this.props;
     const lists = this.props.topicList.map((item) => {
-      const itsLink = `/topic/${item.title}`;
+      const itsLink = `/activity/${item.title}`;
       return (
         <div className="topic_item" key={item.title}>
           <Link to={itsLink}>
@@ -36,11 +36,11 @@ class Activity extends Component {
       );
     });
     const pictures = this.props.topicList.map((item) => {
-      const itsLink = `/topic/${item.title}`;
+      const itsLink = `/activity/${item.title}`;
       return (
         <div className={style.image} key={item.title}>
           <Link to={itsLink}>
-            <img className={style.image} src={`http://${getHostName()}/${item.url}`} alt="???" />
+            <img className={style.image} src={`${getHostName()}${item.image}`} alt="???" />
           </Link>
         </div>
       );
@@ -50,7 +50,11 @@ class Activity extends Component {
         style={this.props.style}
         className={classnames(...className.split(), style.box)}
       >
-        <p className={style.title}>{this.props.title}</p>
+        <Link to={'/activity/'}>
+          <p className={(this.props.title ? style.title : '')}>
+            {this.props.title}
+          </p>
+        </Link>
         <div className={style.imageBox}>
           {pictures}
         </div>

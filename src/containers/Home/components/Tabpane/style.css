@@ -1,7 +1,9 @@
 .box {
-  min-height: 280px;
+  width: 100%;
+  min-height: 200px;
   display: inline-block;
   vertical-align: top;
+  text-align: left;
 }
 
 .text {

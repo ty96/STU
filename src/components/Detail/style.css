@@ -5,6 +5,8 @@
 }
 
 .article {
+  width: 960px;
+  margin: auto;
   font-size: 12px;
   border-top: dotted #ccc 1px;
   border-bottom: dotted #ccc 1px;
@@ -12,7 +14,8 @@
 }
 
 .article img {
-  width: 960px;
+  width: 800px;
+  margin: auto;
   padding: 20px 0;
 }
 

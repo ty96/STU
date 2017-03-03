@@ -1,5 +1,5 @@
 function getHostName() {
-  return '123.56.218.173:8080';
+  return 'https://123.56.218.173';
 }
 
 export default getHostName;

@@ -28,25 +28,27 @@ class Navbar extends Component {
     const { className } = this.props;
 
     return (
-      <div
-        style={this.props.style}
-        className={classnames(...className.split(), style.navBar)}
-      >
-        <img
-          src={STULogo}
-          alt="logo"
-          className={style.logo}
-        />
-        <div className={style.titleBox}>
-          <p className={style.title}>电 子 科 技 大 学 学 生 会</p>
-          <p className={classnames(style.title, style.english)}>The Student Union of UESTC</p>
+      <div className={style.box}>
+        <div
+          style={this.props.style}
+          className={classnames(...className.split(), style.navBar)}
+        >
+          <img
+            src={STULogo}
+            alt="logo"
+            className={style.logo}
+          />
+          <div className={style.titleBox}>
+            <p className={style.title}>电 子 科 技 大 学 学 生 会</p>
+            <p className={classnames(style.title, style.english)}>The Student Union of UESTC</p>
+          </div>
+          <Search
+            className={style.search}
+            placeholder="input search text"
+            style={{ width: 240, float: 'right', margin: '36px 0' }}
+            onSearch={value => console.log(value)}
+          />
         </div>
-        <Search
-          className={style.search}
-          placeholder="input search text"
-          style={{ width: 240, float: 'right', margin: '36px 100px' }}
-          onSearch={value => console.log(value)}
-        />
       </div>
     );
   }

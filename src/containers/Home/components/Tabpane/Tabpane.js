@@ -9,6 +9,7 @@ class Tabpane extends Component {
     style: PropTypes.string,
     className: PropTypes.string,
     topicList: PropTypes.array,
+    type: PropTypes.string,
   };
 
   static defaultProps = {
@@ -23,9 +24,9 @@ class Tabpane extends Component {
   render() {
     const { className } = this.props;
     const lists = this.props.topicList.map((item) => {
-      const itsLink = `/topic/${item.title}`;
+      const itsLink = `/${this.props.type}/${item.title}`;
       return (
-        <div className="topic_item" key={item.title}>
+        <div className={style.text} key={item.title}>
           <Link to={itsLink}>
             <p className={style.text}>{item.title}</p>
           </Link>
