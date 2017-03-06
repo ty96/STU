@@ -1,0 +1,34 @@
+.box {
+  width: 240px;
+  display: inline-block;
+  padding: 20px 30px;
+  margin-top: 60px;
+}
+
+.option {
+  display: block;
+  font-size: 16px;
+  color: #aaa;
+  line-height: 36px;
+}
+
+.option:before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #aaa;
+}
+
+.active {
+  color: #49a9ee;
+}
+
+.active:before {
+  width: 12px;
+  height: 12px;
+  margin: 0 8px;
+  background: #49a9ee;
+}

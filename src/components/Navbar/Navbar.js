@@ -33,15 +33,17 @@ class Navbar extends Component {
           style={this.props.style}
           className={classnames(...className.split(), style.navBar)}
         >
-          <img
-            src={STULogo}
-            alt="logo"
-            className={style.logo}
-          />
-          <div className={style.titleBox}>
-            <p className={style.title}>电 子 科 技 大 学 学 生 会</p>
-            <p className={classnames(style.title, style.english)}>The Student Union of UESTC</p>
-          </div>
+          <a href="/">
+            <img
+              src={STULogo}
+              alt="logo"
+              className={style.logo}
+            />
+            <div className={style.titleBox}>
+              <p className={style.title}>电 子 科 技 大 学 学 生 会</p>
+              <p className={classnames(style.title, style.english)}>The Student Union of UESTC</p>
+            </div>
+          </a>
           <Search
             className={style.search}
             placeholder="input search text"

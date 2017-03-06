@@ -2,17 +2,22 @@
   width: 960px;
   margin: auto;
   text-align: center;
+  position: relative;
 }
 
 .tabs {
   width: 450px;
-  padding: 20px;
+  padding: 30px 20px 20px;
   margin: 10px;
   border-radius: 10px;
   border: solid #ccc 1px;
   display: inline-block;
   vertical-align: top;
   float: none;
+}
+
+.tab {
+  height: 50px;
 }
 
 .others {
@@ -53,4 +58,19 @@
   width: 200px;
   height: 150px;
   margin: 20px 10px;
+}
+
+.tabTitle {
+  position: absolute;
+  top: 20px;
+  left: 18px;
+}
+
+.tabTitle img {
+  width: 40px;
+  margin: 0 14px;
+}
+
+.tabTitle .tabL {
+  width: 48px;
 }

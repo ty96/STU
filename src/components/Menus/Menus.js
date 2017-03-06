@@ -11,7 +11,7 @@ const menu2 = (
       <a target="" rel="" href="/#/a/schoolunion">学联简介</a>
     </Menu.Item>
     <Menu.Item>
-      <a target="" rel="" href="/#/a/zzjg">组织架构</a>
+      <a target="" rel="" href="/#/a/schoolunionsystem">组织架构</a>
     </Menu.Item>
     <Menu.Item>
       <a target="" rel="" href="/#/a/suphoto">学联历史</a>
@@ -72,10 +72,10 @@ const menu3 = (
 const menu5 = (
   <Menu className={style.dropDown}>
     <Menu.Item>
-      <a target="" rel="" href="/#/a/contact">外事联络</a>
+      <a target="" rel="" href="/#/c/contact">外事联络</a>
     </Menu.Item>
     <Menu.Item>
-      <a target="" rel="" href="/#/a/business">商业合作</a>
+      <a target="" rel="" href="/#/c/business">商业合作</a>
     </Menu.Item>
   </Menu>
 );
@@ -83,16 +83,16 @@ const menu5 = (
 const menu6 = (
   <Menu className={style.dropDown}>
     <Menu.Item>
-      <a target="" rel="" href="/#/a/hqbx">后勤保修</a>
+      <a target="" rel="" href="/#/o/fixserver">后勤保修</a>
     </Menu.Item>
     <Menu.Item>
-      <a target="" rel="" href="/#/a/wqts">维权投诉</a>
+      <a target="" rel="" href="">维权投诉</a>
     </Menu.Item>
     <Menu.Item>
-      <a target="" rel="" href="/#/a/area">场地租借</a>
+      <a target="" rel="" href="/#/o/area">场地租借</a>
     </Menu.Item>
     <Menu.Item>
-      <a target="" rel="" href="/#/a/schoolmap">学校地图</a>
+      <a target="" rel="" href="/#/o/schoolmap">学校地图</a>
     </Menu.Item>
   </Menu>
 );
@@ -137,34 +137,34 @@ class Menus extends Component {
             学联新闻
           </a>
           <Dropdown overlay={menu2} style={{ width: 120 }}>
-            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="">
+            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="#">
               学联概况
             </a>
           </Dropdown>
           <Dropdown overlay={menu3} style={{ width: 120 }}>
-            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="">
+            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="#">
               校学生会
             </a>
           </Dropdown>
-          <a className={classnames('ant-dropdown-link', style.dropBtn)} href="/#/a/yhtx">
+          <a className={classnames('ant-dropdown-link', style.dropBtn)} href="/#/s/framework">
             院会体系
           </a>
           <Dropdown overlay={menu5} style={{ width: 120 }}>
-            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="">
+            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="#">
               合作交流
             </a>
           </Dropdown>
           <Dropdown overlay={menu6} style={{ width: 120 }}>
-            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="">
+            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="#">
               公共服务
             </a>
           </Dropdown>
           <Dropdown overlay={menu7} style={{ width: 120 }}>
-            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="">
+            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="#">
               学习空间
             </a>
           </Dropdown>
-          <a className={classnames('ant-dropdown-link', style.dropBtn)} href="/#/a/joinus">
+          <a className={classnames('ant-dropdown-link', style.dropBtn)} href="/#/j/joinus">
             加入我们
           </a>
         </div>

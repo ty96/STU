@@ -13,6 +13,10 @@ import Activity from './components/Activity';
 import Tabpane from './components/Tabpane';
 import { Tabs } from 'antd';
 import getHostName from 'utils/hostName';
+import learn from 'images/learn.png';
+import rights from 'images/rights.png';
+import thoughts from 'images/thoughts.png';
+
 
 import 'whatwg-fetch';
 import * as actions from './actions';
@@ -92,14 +96,19 @@ class Home extends Component {
         </div>
 
         <div className={style.newsBox}>
+          <div className={style.tabTitle}>
+            <img className={style.tabL} src={learn} alt="学术" />
+            <img className={style.tabR} src={rights} alt="权益" />
+            <img className={style.tabT} src={thoughts} alt="思潮" />
+          </div>
           <Tabs defaultActiveKey="1" className={style.tabs}>
-            <TabPane tab="学术" key="1">
+            <TabPane tab="" key="1">
               <Tabpane topicList={this.state.academy} type={'academy'} title="" />
             </TabPane>
-            <TabPane tab="权益" key="2">
+            <TabPane tab="" key="2">
               <Tabpane topicList={this.state.rights} type={'rights'} title="" />
             </TabPane>
-            <TabPane tab="思潮" key="3">
+            <TabPane tab="" key="3">
               <Tabpane topicList={this.state.thoughts} type={'thoughts'} title="" />
             </TabPane>
           </Tabs>

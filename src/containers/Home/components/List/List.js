@@ -28,7 +28,7 @@ class List extends Component {
     const lists = this.props.topicList.map((item) => {
       const itsLink = `/${this.props.newsType}/${item.title}`;
       return (
-        <div className="topic_item" key={item.title}>
+        <div className={style.topic} key={item.title}>
           <Link to={itsLink}>
             <p className={style.text}>{item.title}</p>
           </Link>

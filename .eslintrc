@@ -10,16 +10,18 @@
         "react/forbid-prop-types": 0,
         "react/jsx-filename-extension": 0,
         "react/self-closing-comp": 0,
-      "no-plusplus": 0,
+        "no-plusplus": 0,
         "import/imports-first": 0,
         "import/no-extraneous-dependencies": 0,
         "import/prefer-default-export": 0,
         "no-eval": 0,
-        "no-console": 0
+        "no-console": 0,
+        "arrow-body-style": 0,
+        "jsx-a11y/href-no-hash": 0
     },
-    settings: {
-      import/resolver: {
-        webpack: {config: 'webpack/base.js'}
+    "settings": {
+      "import/resolver": {
+      "webpack": {"config": "webpack/base.js"}
       }
     },
     "env": {

@@ -15,5 +15,16 @@
 .article a {
   font-size: 14px;
   line-height: 32px;
-  color: #222;
+  color: #666;
+}
+
+.viewNum {
+  float: right;
+  color: #999;
+}
+
+.viewNum span {
+  width: 40px;
+  display: inline-block;
+  text-align: center;
 }

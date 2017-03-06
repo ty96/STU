@@ -14,7 +14,11 @@ import thoughtsDetail from 'containers/thoughtsDetail';
 import xNewsList from 'containers/xNewsList';
 import sNewsList from 'containers/sNewsList';
 import infoList from 'containers/infoList';
-import article from 'containers/articles/article';
+import intro from 'containers/articles/intro';
+import school from 'containers/articles/school';
+import coop from 'containers/articles/coop';
+import others from 'containers/articles/others';
+import join from 'containers/articles/join';
 import department from 'containers/articles/department';
 
 export function createRoutes() {
@@ -73,11 +77,27 @@ export function createRoutes() {
     },
     {
       path: '/a/:id',
-      component: article,
+      component: intro,
     },
     {
       path: '/d/:id',
       component: department,
+    },
+    {
+      path: '/s/:id',
+      component: school,
+    },
+    {
+      path: '/c/:id',
+      component: coop,
+    },
+    {
+      path: '/o/:id',
+      component: others,
+    },
+    {
+      path: '/j/:id',
+      component: join,
     },
   ]);
 }

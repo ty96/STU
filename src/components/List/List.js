@@ -28,8 +28,10 @@ class List extends Component {
             <p className={style.text}>
               <span>[{item.datetime}]&nbsp;</span>
               {item.title}
-              <span>
-                {item.viewNum}
+              <span className={style.viewNum}>
+                『&nbsp;阅读量:
+                <span>{item.viewNum}</span>
+                &nbsp;』
               </span>
             </p>
           </Link>

@@ -3,11 +3,12 @@ import style from './style.css';
 
 import React, { Component, PropTypes } from 'react';
 import getHostName from 'utils/hostName';
-
+import InnerNav from 'components/InnerNav';
 
 class SinglePage extends Component {
   static propTypes = {
     url: PropTypes.string,
+    infoList: PropTypes.Array,
   };
 
   static defaultProps = {
@@ -18,6 +19,7 @@ class SinglePage extends Component {
     super(props, context);
     this.state = {
       text: '',
+      infoList: [{}],
     };
   }
 
@@ -36,7 +38,10 @@ class SinglePage extends Component {
 
   render() {
     return (
-      <div className={style.article} dangerouslySetInnerHTML={{ __html: this.state.text }}></div>
+      <div className={style.box} >
+        <InnerNav infoList={this.props.infoList} />
+        <div className={style.article} dangerouslySetInnerHTML={{ __html: this.state.text }}></div>
+      </div>
     );
   }
 }

@@ -1,9 +1,16 @@
-.article {
+.box {
   width: 960px;
-  margin: 30px auto;
-  font-size: 12px;
   border-top: dotted #ccc 1px;
   border-bottom: dotted #ccc 1px;
+  margin: 30px auto;
+}
+
+.article {
+  width: 720px;
+  margin-top: 60px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
   padding: 20px;
 }
 
