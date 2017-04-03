@@ -14,7 +14,7 @@ class Detail extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      body: '',
+      text: '',
       title: '',
       excEditor: '',
       image: '',
@@ -25,7 +25,7 @@ class Detail extends Component {
   }
 
   componentDidMount = () => {
-    fetch(`${getHostName()}/${this.props.articleType}/${this.props.title}`)
+    fetch(`${getHostName()}/api/${this.props.articleType}/${this.props.title}`)
       .then((res) => {
         res.json()
           .then((data) => {
@@ -50,8 +50,12 @@ class Detail extends Component {
             <span className={style.right}>浏览次数: {this.state.viewNum}</span>
           </p>
           <h3>{this.state.title}</h3>
-          <img src={`${this.state.hostname}/${this.state.image}`} alt={this.state.image} />
-          <p className={style.body}>{this.state.body}</p>
+          <img
+            style={(this.state.image ? {} : { display: 'none' })}
+            src={(this.state.image ? `${this.state.hostname}/${this.state.image}` : '')}
+            alt={(this.state.image ? this.state.title : '')}
+          />
+          <div className={style.body} dangerouslySetInnerHTML={{ __html: this.state.text }}></div>
         </div>
       </div>
     );

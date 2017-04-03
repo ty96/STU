@@ -23,10 +23,10 @@ class Tabpane extends Component {
 
   render() {
     const { className } = this.props;
-    const lists = this.props.topicList.map((item) => {
+    const lists = this.props.topicList.map((item, index) => {
       const itsLink = `/${this.props.type}/${item.title}`;
       return (
-        <div className={style.text} key={item.title}>
+        <div className={style.text} key={index}>
           <Link to={itsLink}>
             <p className={style.text}>{item.title}</p>
           </Link>

@@ -2,7 +2,6 @@
 if (typeof require.ensure !== 'function') require.ensure = (d, c) => c(require);
 
 import Home from 'containers/Home';
-import Main from 'containers/Main';
 import xNewsDetail from 'containers/xNewsDetail';
 import sNewsDetail from 'containers/sNewsDetail';
 import infoDetail from 'containers/infoDetail';
@@ -26,10 +25,6 @@ export function createRoutes() {
     {
       path: '/',
       component: Home,
-    },
-    {
-      path: '/abc',
-      component: Main,
     },
     {
       path: '/xnews/:id',

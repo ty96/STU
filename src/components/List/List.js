@@ -20,18 +20,17 @@ class List extends Component {
   }
 
   render() {
-    const lists = this.props.topicList.map((item) => {
+    const lists = this.props.topicList.map((item, index) => {
       const itsLink = `/${this.props.newsType}/${item.title}`;
       return (
-        <div className="topic_item" key={item.title}>
+        <div className="topic_item" key={index}>
           <Link to={itsLink}>
             <p className={style.text}>
               <span>[{item.datetime}]&nbsp;</span>
               {item.title}
               <span className={style.viewNum}>
-                『&nbsp;阅读量:
+                阅读量:
                 <span>{item.viewNum}</span>
-                &nbsp;』
               </span>
             </p>
           </Link>

@@ -8,7 +8,7 @@ import getHostName from 'utils/hostName';
 
 class Activity extends Component {
   static propTypes = {
-    style: PropTypes.string,
+    style: PropTypes.any,
     className: PropTypes.string,
     topicList: PropTypes.array,
     title: PropTypes.string,
@@ -25,20 +25,20 @@ class Activity extends Component {
 
   render() {
     const { className } = this.props;
-    const lists = this.props.topicList.map((item) => {
+    const lists = this.props.topicList.map((item, index) => {
       const itsLink = `/activity/${item.title}`;
       return (
-        <div className={style.topic} key={item.title}>
+        <div className={style.topic} key={index}>
           <Link to={itsLink}>
             <p className={style.text}>{item.title}</p>
           </Link>
         </div>
       );
     });
-    const pictures = this.props.topicList.map((item) => {
+    const pictures = this.props.topicList.map((item, index) => {
       const itsLink = `/activity/${item.title}`;
       return (
-        <div className={style.image} key={item.title}>
+        <div className={style.image} key={index}>
           <Link to={itsLink}>
             <img className={style.image} src={`${getHostName()}${item.image}`} alt="???" />
           </Link>

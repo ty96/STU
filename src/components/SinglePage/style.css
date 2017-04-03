@@ -7,6 +7,8 @@
 
 .article {
   width: 720px;
+  max-width: 720px;
+  overflow-x: hidden;
   margin-top: 60px;
   display: inline-block;
   vertical-align: top;
@@ -15,7 +17,6 @@
 }
 
 .article img {
-  width: 920px;
   padding: 20px;
 }
 

@@ -1,48 +1,39 @@
 
 import style from './style.css';
 
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as actions from './actions';
+import React, { Component } from 'react';
 import Navbar from 'components/Navbar';
 import Menus from 'components/Menus';
 import Footer from 'components/Footer';
 import List from 'components/List';
 import getHostName from 'utils/hostName';
+import { Pagination } from 'antd';
 
-function mapStateToProps(state) {
-  return {
-    state: state.infolist,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(actions, dispatch),
-  };
-}
-
-@connect(mapStateToProps, mapDispatchToProps)
 class infoList extends Component {
-  static propTypes = {
-    state: PropTypes.object.isRequired,
-    actions: PropTypes.object.isRequired,
-  };
-
-  static defaultProps = {
-  };
-
   constructor(props, context) {
     super(props, context);
     this.state = {
       information: [{}],
       newsType: 'information',
+      number: 1,
     };
   }
 
   componentDidMount = () => {
-    fetch(`${getHostName()}/${this.state.newsType}`)
+    fetch(`${getHostName()}/api/${this.state.newsType}`)
+      .then((res) => {
+        res.json()
+          .then((data) => {
+            this.setState(data);
+          });
+      })
+      .catch((error) => {
+        console.log('request failed', error);
+      });
+  }
+
+  turnTo = (num) => {
+    fetch(`${getHostName()}/api/${this.state.newsType}?page=${num}`)
       .then((res) => {
         res.json()
           .then((data) => {
@@ -60,7 +51,17 @@ class infoList extends Component {
         <Navbar />
         <div className={style.blank}>&nbsp;</div>
         <Menus options="" />
-        <List topicList={this.state.information} newsType={this.state.newsType} />
+        <List
+          topicList={this.state.information}
+          newsType={this.state.newsType}
+        />
+        <Pagination
+          showQuickJumper
+          className={style.page}
+          defaultCurrent={1}
+          total={this.state.number}
+          onChange={this.turnTo}
+        />
         <Footer />
       </div>
     );

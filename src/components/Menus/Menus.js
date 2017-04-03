@@ -22,9 +22,6 @@ const menu2 = (
     <Menu.Item>
       <a target="" rel="" href="/#/a/suchef">历史主席</a>
     </Menu.Item>
-    <Menu.Item>
-      <a target="" rel="" href="">历史照片</a>
-    </Menu.Item>
   </Menu>
 );
 
@@ -137,30 +134,30 @@ class Menus extends Component {
             学联新闻
           </a>
           <Dropdown overlay={menu2} style={{ width: 120 }}>
-            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="#">
+            <a className={classnames('ant-dropdown-link', style.dropBtn)}>
               学联概况
             </a>
           </Dropdown>
           <Dropdown overlay={menu3} style={{ width: 120 }}>
-            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="#">
+            <a className={classnames('ant-dropdown-link', style.dropBtn)}>
               校学生会
             </a>
           </Dropdown>
-          <a className={classnames('ant-dropdown-link', style.dropBtn)} href="/#/s/framework">
+          <a className={classnames('ant-dropdown-link', style.dropBtn)} href="/#/s/systembrief">
             院会体系
           </a>
           <Dropdown overlay={menu5} style={{ width: 120 }}>
-            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="#">
+            <a className={classnames('ant-dropdown-link', style.dropBtn)}>
               合作交流
             </a>
           </Dropdown>
           <Dropdown overlay={menu6} style={{ width: 120 }}>
-            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="#">
+            <a className={classnames('ant-dropdown-link', style.dropBtn)}>
               公共服务
             </a>
           </Dropdown>
           <Dropdown overlay={menu7} style={{ width: 120 }}>
-            <a className={classnames('ant-dropdown-link', style.dropBtn)} href="#">
+            <a className={classnames('ant-dropdown-link', style.dropBtn)}>
               学习空间
             </a>
           </Dropdown>

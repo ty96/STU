@@ -10,7 +10,7 @@ import getHostName from 'utils/hostName';
 
 class Carousels extends Component {
   static propTypes = {
-    style: PropTypes.string,
+    style: PropTypes.any,
     className: PropTypes.string,
     carouselList: PropTypes.array,
   };
@@ -26,10 +26,10 @@ class Carousels extends Component {
 
   render() {
     const { className } = this.props;
-    const carousels = this.props.carouselList.map((item) => {
+    const carousels = this.props.carouselList.map((item, index) => {
       const itsLink = `/image${item.image}`;
       return (
-        <div className="topic_item" key={item.image}>
+        <div className="topic_item" key={index}>
           <Link to={itsLink}>
             <img
               src={`${getHostName()}${item.image}`}

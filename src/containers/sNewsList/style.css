@@ -3,3 +3,14 @@
   height: 100px;
   background: #000220;
 }
+
+.page {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page li,
+.page div {
+  float: none;
+  display: inline-block;
+}

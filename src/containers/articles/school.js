@@ -17,7 +17,7 @@ class school extends Component {
     super(props, context);
     this.state = {
       infoList: [
-        { title: '院会体系', url: 's/framework' },
+        { title: '院会体系', url: 's/systembrief' },
       ],
     };
   }

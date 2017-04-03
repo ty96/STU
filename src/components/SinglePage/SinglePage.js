@@ -8,7 +8,7 @@ import InnerNav from 'components/InnerNav';
 class SinglePage extends Component {
   static propTypes = {
     url: PropTypes.string,
-    infoList: PropTypes.Array,
+    infoList: PropTypes.array,
   };
 
   static defaultProps = {
@@ -24,21 +24,30 @@ class SinglePage extends Component {
   }
 
   componentDidMount = () => {
-    fetch(`${getHostName()}/${this.props.url}`)
-      .then((res) => {
-        res.json()
-          .then((data) => {
-            this.setState(data);
-          });
-      })
-      .catch((error) => {
-        console.log('request failed', error);
-      });
+    this.fetchData();
+  }
+
+  componentWillReceiveProps = () => {
+    this.fetchData();
+  }
+
+  fetchData = () => {
+    fetch(`${getHostName()}/api/${this.props.url}`)
+       .then((res) => {
+         res.json()
+           .then((data) => {
+             this.setState(data);
+             this.setState({ text: data.text.replace(/[\\"]g/, "'") });
+           });
+       })
+       .catch((error) => {
+         console.log('request failed', error);
+       });
   }
 
   render() {
     return (
-      <div className={style.box} >
+      <div className={style.box}>
         <InnerNav infoList={this.props.infoList} />
         <div className={style.article} dangerouslySetInnerHTML={{ __html: this.state.text }}></div>
       </div>

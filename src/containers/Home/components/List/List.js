@@ -25,10 +25,10 @@ class List extends Component {
 
   render() {
     const { className } = this.props;
-    const lists = this.props.topicList.map((item) => {
+    const lists = this.props.topicList.map((item, index) => {
       const itsLink = `/${this.props.newsType}/${item.title}`;
       return (
-        <div className={style.topic} key={item.title}>
+        <div className={style.topic} key={index}>
           <Link to={itsLink}>
             <p className={style.text}>{item.title}</p>
           </Link>

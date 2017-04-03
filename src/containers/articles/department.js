@@ -36,7 +36,6 @@ class department extends Component {
 
   render() {
     const param = this.props.params.id;
-
     return (
       <div className={style.body}>
         <Navbar />

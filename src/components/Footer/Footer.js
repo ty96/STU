@@ -43,7 +43,7 @@ class Footer extends Component {
         <p>IEC 工作室</p>
         <p>© 2017 电子科技大学学生会</p>
         <div className={style.login}>
-          <a href="http://123.56.218.173:8080/xadmin/">管理员登陆</a>
+          <a href="http://222.197.182.48/xadmin/">管理员登陆</a>
         </div>
       </div>
     );

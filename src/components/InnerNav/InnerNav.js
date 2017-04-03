@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 
 class InnerNav extends Component {
   static propTypes = {
-    infoList: PropTypes.Array,
+    infoList: PropTypes.array,
   };
 
   constructor(props, context) {
@@ -14,9 +14,10 @@ class InnerNav extends Component {
   }
 
   render() {
-    const innerNav = this.props.infoList.map((item) => {
+    const innerNav = this.props.infoList.map((item, index) => {
       return (
         <Link
+          key={index}
           to={(item.url ? item.url : item.title)}
           className={style.option}
           activeClassName={style.active}

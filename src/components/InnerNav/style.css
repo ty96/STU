@@ -22,6 +22,11 @@
   background: #aaa;
 }
 
+.option:hover:before {
+  background: #49a9ee;
+  transition: background .3s ease;
+}
+
 .active {
   color: #49a9ee;
 }

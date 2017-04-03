@@ -1,7 +1,7 @@
 .box {
   padding: 0 10px;
   width: 310px;
-  min-height: 360px;
+  min-height: 300px;
   display: inline-block;
   vertical-align: top;
   text-align: left;
@@ -11,27 +11,21 @@
   position: relative;
 }
 
-.topic:after {
-  content: '...';
-  position: absolute;
-  left: 263px;
-  top: 8px;
-}
-
 .text {
-  width: 260px;
+  width: 280px;
   font-size: 14px;
   line-height: 40px;
   color: #666;
   white-space: nowrap;
   overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 .title {
   color: white;
   font-size: 18px;
   line-height: 36px;
-  margin: 20px 0;
+  margin: 20px 0 10px;
   padding-left: 20px;
 }
 

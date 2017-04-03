@@ -1,9 +1,7 @@
 
 import style from './style.css';
 
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import React, { Component } from 'react';
 import Footer from 'components/Footer';
 import List from './components/List';
 import Carousels from './components/Carousels';
@@ -19,33 +17,10 @@ import thoughts from 'images/thoughts.png';
 
 
 import 'whatwg-fetch';
-import * as actions from './actions';
 
 const TabPane = Tabs.TabPane;
 
-
-function mapStateToProps(state) {
-  return {
-    state: state.home,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(actions, dispatch),
-  };
-}
-
-@connect(mapStateToProps, mapDispatchToProps)
 class Home extends Component {
-  static propTypes = {
-    state: PropTypes.object.isRequired,
-    actions: PropTypes.object.isRequired,
-  };
-
-  static defaultProps = {
-  };
-
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -64,7 +39,7 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
-    fetch(`${getHostName()}/index/`)
+    fetch(`${getHostName()}/api/index/`)
       .then((res) => {
         res.json()
           .then((data) => {

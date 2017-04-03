@@ -19,11 +19,10 @@ class intro extends Component {
     this.state = {
       infoList: [
         { title: '学联简介', url: 'a/schoolunion' },
-        { title: '组织架构', url: 'a/schoolunionsystem' },
+        { title: '组织架构', url: 'a/departmentframework' },
         { title: '学联历史', url: 'a/suphoto' },
         { title: '现任骨干', url: 'a/sustaff' },
         { title: '历任主席', url: 'a/suchef' },
-        { title: '历史照片', url: '' },
       ],
     };
   }
